@@ -1,11 +1,3 @@
-/**
- * TODO o conteúdo do portfólio fica aqui.
- * Para mudar um texto, link ou imagem, edite este arquivo — os componentes só leem daqui.
- *
- * Imagens: coloque o arquivo em /public/projetos (ex.: /public/projetos/landing.png)
- * e preencha o campo `cover` com o caminho ("/projetos/landing.png").
- * Sem `cover`, o site gera uma capa tipográfica automaticamente.
- */
 
 export type CaseBlock = {
   heading: string;
@@ -51,35 +43,27 @@ export type SkillGroup = {
   items: string[];
 };
 
-/* ------------------------------------------------------------------ */
-/* Dados gerais                                                        */
-/* ------------------------------------------------------------------ */
-
 export const site = {
   name: "Fabricio Ripardo",
   fullName: "Fabricio Ripardo Amorim",
   logo: "fabricio",
   role: "QA · Full-stack",
   location: "Caridade, CE",
-  // TODO: troque pelo domínio final depois do deploy (ex.: https://fabricioripardo.vercel.app)
+  
   url: "https://fabricioripardo.vercel.app",
   description:
     "Portfólio de Fabricio Ripardo — estudante de Análise e Desenvolvimento de Sistemas no IFCE, focado em qualidade de software (QA) e desenvolvimento full-stack.",
   intro:
     "Fabricio Ripardo, Ceará. Estudante de Análise e Desenvolvimento de Sistemas no IFCE, construindo carreira em qualidade de software e desenvolvimento full-stack.",
-  // Selo no topo do site. Deixe "" para esconder.
+
   availability: "Disponível para estágio e vagas júnior",
   email: "fabricioripardo6@gmail.com",
   links: {
     linkedin: "https://www.linkedin.com/in/fabricio-ripardo-688082265",
-    // TODO: coloque seu usuário do GitHub
     github: "https://github.com/Fabricio-Ripardo",
   },
 };
 
-/* ------------------------------------------------------------------ */
-/* Experiência                                                         */
-/* ------------------------------------------------------------------ */
 
 export const workItems: PortfolioCase[] = [
   {
@@ -154,9 +138,6 @@ export const workItems: PortfolioCase[] = [
   },
 ];
 
-/* ------------------------------------------------------------------ */
-/* Projetos                                                            */
-/* ------------------------------------------------------------------ */
 
 export const projectItems: PortfolioCase[] = [
   {
@@ -206,7 +187,7 @@ export const projectItems: PortfolioCase[] = [
       "Página de captação para um consultor autorizado de planos de saúde, com identidade preta e dourada e orçamento direto pelo WhatsApp.",
     cover: "/projetos/landing-hero.png",
     gallery: ["/projetos/landing-sobre.png", "/projetos/landing-planos.png"],
-    // links: [{ label: "Ver site", href: "https://..." }],
+
     detail: {
       summary:
         "Transformei um design entregue em imagem em uma landing page responsiva, rápida e pronta para converter visitantes em pedidos de orçamento.",
@@ -342,20 +323,12 @@ export const projectItems: PortfolioCase[] = [
   },
 ];
 
-/* ------------------------------------------------------------------ */
-/* Stack                                                               */
-/* ------------------------------------------------------------------ */
-
 export const skillGroups: SkillGroup[] = [
   { title: "Qualidade", items: ["Robot Framework", "Selenium", "Testes de API", "Postman", "GitHub Actions"] },
   { title: "Back-end", items: ["Python · Django", "Java · Spring Boot"] },
   { title: "Front-end", items: ["TypeScript", "React", "Next.js", "Tailwind CSS"] },
   { title: "Dados & Redes", items: ["SQL", "MariaDB", "Fibra óptica", "Roteadores e ONU"] },
 ];
-
-/* ------------------------------------------------------------------ */
-/* Educação                                                            */
-/* ------------------------------------------------------------------ */
 
 export const education: EducationItem[] = [
   {
@@ -373,8 +346,6 @@ export const education: EducationItem[] = [
     category: "Ensino técnico",
   },
 ];
-
-/* ------------------------------------------------------------------ */
 
 export function getWorkItem(slug: string) {
   return workItems.find((item) => item.slug === slug);
